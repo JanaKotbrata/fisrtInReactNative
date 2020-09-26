@@ -87,7 +87,7 @@ function Movies() {
             return parseInt(a.episode_number, 10) - parseInt(b.episode_number, 10);
         } else {
             return parseInt(b.episode_number, 10) - parseInt(a.episode_number, 10);
-        }
+         }
     })];
 
     function handleChange() {
