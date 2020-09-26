@@ -82,13 +82,13 @@ function Movies() {
         fetchMovies();
     }, []);
 
-    const sorting = movies.sort((a: MovieType, b: MovieType) => {
+    const sorting = [...movies.sort((a: MovieType, b: MovieType) => {
         if (asc) {
             return parseInt(a.episode_number, 10) - parseInt(b.episode_number, 10);
         } else {
             return parseInt(b.episode_number, 10) - parseInt(a.episode_number, 10);
         }
-    });
+    })];
 
     function handleChange() {
         setAsc(!asc);
